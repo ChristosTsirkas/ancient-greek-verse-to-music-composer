@@ -7,7 +7,7 @@
 3. Git clone the Repository in a folder on your host OS.
 4. Rename `.env.example` to `.env`., and edit the contents of the ".env" file, to connect to your database.
 5. Edit the contents of the ".env" file to use your Google app credentials (see [Google OAuth setup](#9-google-oauth-setup)).
-6. Run `npm install` and `npm run dev`, like for any other TypeScript app.
+6. Run `npm ci` and `npm run dev`, like for any other TypeScript app.
 7. Open your browser at  `http://localhost:5000`.
 
 ## 2. Automated Docker installation
@@ -147,7 +147,7 @@ Update system and install PostgreSQL:
 ```bash
 apt update && apt upgrade -y
 apt install -y curl git build-essential
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
 apt install -y nodejs
 apt install -y postgresql postgresql-contrib
 systemctl enable postgresql
@@ -238,28 +238,31 @@ END$$;
 
 ### 6. Clone Repository
 
-Create app directory and clone:
+Create the application directory and clone the public repository:
 
 ```bash
 cd /var
-mkdir www && cd www
-git clone https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer.git
-cd ChristosTsirkas/ancient-greek-verse-to-music-composer
-shopt -s dotglob nullglob && mv * .. && cd .. && rmdir ancient-greek-verse-to-music-composer
+git clone https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer.git www
+cd /var/www
+cp .env.example .env
+chmod 600 .env
 ```
 
 ### 7. Install Application
 
 ```bash
-npm install --ignore-scripts
-npm install dotenv --ignore-scripts
-npm rebuild esbuild bufferutil
-npm audit
+npm ci
 ```
+
+Current npm 11 releases may print an `allow-scripts` warning for transitive
+dependencies after a successful installation. This is advisory in npm 11: it does
+not prevent the listed scripts from running and does not prevent the app from
+building or starting. No `npm approve-scripts` command is needed for this
+application installation.
 
 ### 8. Configure Environment
 
-Rename ".env.example" to ".env", and edit your .env file to match your configuration:
+Edit the `.env` file created in the previous step to match your configuration:
 
 ```bash
 nano .env
@@ -308,6 +311,8 @@ npm start
 
 The app should be available on http://YOUR_SERVER_IP:5000
 
+Stop this foreground test with `Ctrl+C` before starting the system service.
+
 ### 11. Configure Firewall
 
 ```bash
@@ -353,6 +358,25 @@ sudo systemctl start myapp
 ```
 
 The app should be available on http://YOUR_SERVER_IP:5000
+
+### Updating an existing manual installation
+
+For a normal code update, keep the existing `.env` file and database. Do not
+delete `/var/www` or use `rm -rf *`.
+
+```bash
+cd /var/www
+sudo systemctl stop myapp
+git pull --ff-only
+npm ci
+npm run build
+sudo systemctl start myapp
+sudo systemctl enable myapp
+```
+
+If the application is intentionally run without systemd, omit the
+`systemctl` commands and use `npm start` after the build for a foreground
+smoke test.
 
 ### 14. SSL Setup with Nginx (Optional)
 

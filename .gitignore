@@ -1,0 +1,11 @@
+.DS_Store
+dist
+coverage
+.env
+.git/*
+.idea/**
+node_modules
+downloads/midi/*
+downloads/scores/*
+!downloads/midi/.gitkeep
+!downloads/scores/.gitkeep

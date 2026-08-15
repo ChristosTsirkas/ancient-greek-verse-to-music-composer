@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: hsl(248, 100%, 99%);
+    --foreground: hsl(20, 14.3%, 4.1%);
+    --muted: hsl(220, 14.3%, 95.9%);
+    --muted-foreground: hsl(220, 8.9%, 46.1%);
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(20, 14.3%, 4.1%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(20, 14.3%, 4.1%);
+    --border: hsl(220, 13%, 91%);
+    --input: hsl(220, 13%, 91%);
+    --primary: hsl(221, 83%, 53%);
+    --primary-foreground: hsl(210, 40%, 98%);
+    --secondary: hsl(220, 14.3%, 95.9%);
+    --secondary-foreground: hsl(220, 9%, 9%);
+    --accent: hsl(220, 14.3%, 95.9%);
+    --accent-foreground: hsl(220, 9%, 9%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(60, 9.1%, 97.8%);
+    --ring: hsl(221, 83%, 53%);
+    --radius: 0.5rem;
+
+    /* Classical Greek theme colors */
+    --classical-blue-50: hsl(214, 100%, 97%);
+    --classical-blue-100: hsl(214, 95%, 93%);
+    --classical-blue-500: hsl(217, 91%, 60%);
+    --classical-blue-600: hsl(221, 83%, 53%);
+    --classical-blue-700: hsl(224, 76%, 48%);
+    --classical-blue-800: hsl(226, 71%, 40%);
+    --classical-blue-900: hsl(224, 64%, 33%);
+
+    --greek-gold-50: hsl(48, 100%, 96%);
+    --greek-gold-100: hsl(48, 96%, 89%);
+    --greek-gold-400: hsl(45, 93%, 58%);
+    --greek-gold-500: hsl(43, 96%, 56%);
+    --greek-gold-600: hsl(32, 95%, 44%);
+
+    --marble-50: hsl(210, 40%, 98%);
+    --marble-100: hsl(210, 40%, 96%);
+    --marble-200: hsl(214, 32%, 91%);
+    --marble-300: hsl(213, 27%, 84%);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply font-sans antialiased bg-background text-foreground;
+    }
+
+    .font-classical {
+        font-family: 'Playfair Display', serif;
+    }
+
+    .font-greek {
+        font-family: 'Times New Roman', serif;
+    }
+
+    .bg-classical-blue-50 {
+        background-color: var(--classical-blue-50);
+    }
+
+    .bg-classical-blue-700 {
+        background-color: var(--classical-blue-700);
+    }
+
+    .bg-classical-blue-800 {
+        background-color: var(--classical-blue-800);
+    }
+
+    .bg-greek-gold-50 {
+        background-color: var(--greek-gold-50);
+    }
+
+    .bg-greek-gold-500 {
+        background-color: var(--greek-gold-500);
+    }
+
+    .bg-marble-50 {
+        background-color: var(--marble-50);
+    }
+
+    .text-classical-blue-100 {
+        color: var(--classical-blue-100);
+    }
+
+    .text-classical-blue-600 {
+        color: var(--classical-blue-600);
+    }
+
+    .text-classical-blue-700 {
+        color: var(--classical-blue-700);
+    }
+
+    .text-classical-blue-800 {
+        color: var(--classical-blue-800);
+    }
+
+    .text-greek-gold-400 {
+        color: var(--greek-gold-400);
+    }
+
+    .text-greek-gold-500 {
+        color: var(--greek-gold-500);
+    }
+
+    .border-classical-blue-200 {
+        border-color: var(--classical-blue-100);
+    }
+
+    .border-greek-gold-200 {
+        border-color: var(--greek-gold-100);
+    }
+
+    .border-marble-200 {
+        border-color: var(--marble-200);
+    }
+
+    .border-marble-300 {
+        border-color: var(--marble-300);
+    }
+
+    .hover\:bg-classical-blue-800:hover {
+        background-color: var(--classical-blue-800);
+    }
+
+    .hover\:bg-greek-gold-600:hover {
+        background-color: var(--greek-gold-600);
+    }
+
+    .hover\:bg-marble-50:hover {
+        background-color: var(--marble-50);
+    }
+
+}

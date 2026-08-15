@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+type: software
+title: "Ancient Greek Verse to MIDI Composer"
+authors:
+  - family-names: "Tsirkas"
+    given-names: "Chris"
+url: "https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer"
+repository-code: "https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer"
+abstract: >-
+  AI-assisted interpretative research software for rendering Ancient Greek
+  verse and metrical patterns as MIDI compositions; unreviewed.
+keywords:
+  - "Ancient Greek"
+  - "Greek metre"
+  - "MIDI"
+  - "ancient music"
+  - "interpretative research software"
+preferred-citation:
+  type: software
+  title: "Ancient Greek Verse to MIDI Composer"
+  authors:
+    - family-names: "Tsirkas"
+      given-names: "Chris"
+  year: 2026
+  url: "https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer"
+  abstract: "AI-assisted interpretative research software, unreviewed."

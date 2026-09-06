@@ -2,19 +2,20 @@
 
 **Hear Ancient Greek verse as structured musical time.**
 
-Ancient Greek Verse to MIDI Composer is an academic listening tool that turns
-Greek verse and metrical patterns into downloadable MIDI compositions. It
-brings metrical analysis, three synchronized musical layers, ancient-style
-instrument mappings, and configurable pitch and rhythm models into one
-accessible web application.
+Ancient Greek Verse to MIDI Composer is an evidence-aware research and
+teaching application that turns Greek verse and metrical patterns into
+downloadable MIDI compositions. It brings metrical analysis, synchronized
+musical layers, practical instrument mappings, and configurable pitch and
+rhythm models into one accessible web application.
 
 Use it to compare metres, test how long and short syllables shape a rhythm,
 and create repeatable listening examples for teaching, study, or research.
 Every experimental choice is labeled as such: this is a transparent
 interpretative tool, not a claim to reproduce an ancient performance exactly.
 
-The project attempts to document the distinction between attested ancient evidence and its own
-audible, experimental interpretations.
+The project explicitly documents the distinction between attested ancient
+evidence, modern scholarly interpretation, algorithmic realization, and
+deliberately experimental audible models.
 
 ## Built for students and academics
 
@@ -59,10 +60,12 @@ A working demo is available at
 
 ## Documentation
 
-- [AI assistance and authorship disclosure](AI_DISCLOSURE.md) — how AI and
-  human direction contributed, plus the project's research limitations.
+- [AI assistance and authorship disclosure](AI_DISCLOSURE.md) — transparent
+  documentation of the role of generative AI in software development,
+  documentation, and manuscript preparation, together with human authorship
+  and responsibility.
 - [How to cite](CITATION.cff) — GitHub-readable citation metadata and the
-  recommended AI-assisted, interpretative-software citation.
+  recommended project citation.
 - [Installation and Google OAuth setup](docs/INSTALLATION.md) — local
   development, Debian/Ubuntu deployment, database, OAuth, and Nginx steps.
 - [Provenance and source limits](docs/PROVENANCE.md) — the evidence behind
@@ -92,12 +95,15 @@ and the planned paper license.
 
 ## Citation
 
-If you cite this project, identify it as AI-assisted, interpretative
-research software and note that it is unreviewed. Suggested form:
+Suggested citation:
 
 > Tsirkas, C. (2026). *Ancient Greek Verse to MIDI Composer*.
-> AI-assisted interpretative research software, unreviewed.
+> Evidence-aware research software for ancient Greek verse and musical
+> realization.
 > https://github.com/ChristosTsirkas/ancient-greek-verse-to-music-composer
 
 Machine-readable citation metadata is available in
 [CITATION.cff](CITATION.cff).
+
+The project's use of generative AI is documented separately and transparently
+in [AI_DISCLOSURE.md](AI_DISCLOSURE.md); it is not presented as authorship.

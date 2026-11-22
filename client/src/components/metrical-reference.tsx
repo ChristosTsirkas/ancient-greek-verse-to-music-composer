@@ -169,11 +169,11 @@ export default function MetricalReference() {
                 <h3 className="text-lg font-semibold text-classical-blue-700 mb-4">
                     Essential patterns
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
                     {basicPatterns.map((pattern, index) => (
                         <div
                             key={index}
-                            className="bg-marble-50 p-3 rounded-lg border border-marble-200 w-50"
+                            className="bg-marble-50 p-4 rounded-lg border border-marble-200 w-full"
                         >
                             <div className="text-center">
                                 <div className="text-xl font-bold text-classical-blue-700 mb-1 font-mono">
@@ -220,11 +220,11 @@ export default function MetricalReference() {
                             <h4 className="text-md font-semibold text-classical-blue-700 mb-3">
                                 {category.category}
                             </h4>
-                            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
                                 {category.patterns.map((pattern, index) => (
                                     <div
                                         key={index}
-                                        className="bg-classical-blue-50 p-3 rounded-lg border border-classical-blue-200 w-50"
+                                        className="bg-classical-blue-50 p-4 rounded-lg border border-classical-blue-200 w-full"
                                     >
                                         <div className="text-center">
                                             <div className="text-lg font-bold text-classical-blue-700 mb-1 font-mono">

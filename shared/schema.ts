@@ -134,9 +134,7 @@ export const midiGenerationSchema = z.object({
                                                                                 "rhoptron", "keraunoskopion", "hand_clap_light", "hand_clap_strong",
                                                                             ],
                                                                             {
-                                                                                errorMap: () => (
-                                                                                    { message: "Please select a valid ancient Greek instrument" }
-                                                                                ),
+                                                                                error: "Please select a valid ancient Greek instrument",
                                                                             }),
                                                  tempo:              z.number().min(60).max(200).default(120),
                                                  mode:               z.enum(["dorian", "phrygian", "lydian", "mixolydian", "aeolian", "hypolydian", "hypophrygian", "hypodorian"]).default("dorian"),
